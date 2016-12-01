@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (C) 2013 Huawei Inc.
+ * Power Genie Config
+ *
+    policy name             value                  default
+    policy_auto(1 in db)    1 (use auto)           0    (no use)
+    policy_ratio(2 in db)   1 ~ 99                 0    (no use)
+    package_name            app package name.      NULL (no use)
+ -->
+
+<backlight_policy version="1">
+
+    <mode id="0">  <!-- common policy for all power mode -->
+    </mode>
+
+    <mode id="1">  <!-- Super Mode policy -->
+        <action name="browser front" id="203">
+            <item name="policy_ratio">56</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="office front" id="225">
+            <item name="policy_ratio">56</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="mms front" id="235">
+            <item name="policy_ratio">68</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="ebook front" id="205">
+            <item name="policy_ratio">56</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="special front" id="-1"> <!-- id is not used. not use the 0 as id -->
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">76</item>
+            <item name="package_name">com.android.email</item>
+            <item name="package_name">com.google.android.gm</item><!-- gmail -->
+            <item name="package_name">com.huawei.hidisk</item>
+            <item name="package_name">com.qzone</item> 
+            <item name="package_name">com.tencent.mm</item>
+            <item name="package_name">com.android.contacts</item><!-- CPS for EMUI3 -->
+            <item name="package_name">com.taobao.taobao</item>
+            <item name="package_name">com.jingdong.app.mall</item>
+        </action>
+
+        <action name="special front" id="-1"> <!-- id is not used. not use the 0 as id -->
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">56</item>
+            <item name="package_name">com.huawei.android.webcustomize</item>
+        </action>
+
+        <action name="default front" id="208">
+            <item name="policy_ratio">80</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+    </mode>
+
+    <mode id="2">  <!-- Nomal Mode policy -->
+        <action name="browser front" id="203">
+            <item name="policy_ratio">56</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="office front" id="225">
+            <item name="policy_ratio">56</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="mms front" id="235">
+            <item name="policy_ratio">68</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="ebook front" id="205">
+            <item name="policy_ratio">56</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <action name="qq browser front" id="-1"> <!-- id is not used. not use the 0 as id -->
+            <item name="policy_ratio">100</item><!-- not change the backlight for qq brower -->
+            <item name="package_name">com.tencent.mtt</item>
+        </action>
+
+        <action name="special front" id="-1"> <!-- id is not used. not use the 0 as id -->
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">76</item>
+            <item name="package_name">com.android.email</item>
+            <item name="package_name">com.google.android.gm</item><!-- gmail -->
+            <item name="package_name">com.huawei.hidisk</item>
+            <item name="package_name">com.qzone</item>
+            <item name="package_name">com.tencent.mm</item>
+            <item name="package_name">com.android.contacts</item><!-- CPS for EMUI3 -->
+            <item name="package_name">com.taobao.taobao</item>
+            <item name="package_name">com.jingdong.app.mall</item>
+        </action>
+
+        <action name="special front" id="-1"> <!-- id is not used. not use the 0 as id -->
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">56</item>
+            <item name="package_name">com.huawei.android.webcustomize</item>
+        </action>
+
+	<action name="special front" id="100"> <!-- id is not used. not use the 0 as id -->
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">70</item>
+            <item name="package_name">com.tencent.mobileqq</item>
+	    <item name="package_name">com.sina.weibo</item>
+	    <item name="package_name">com.baidu.tieba</item>
+	    <item name="package_name">com.ss.android.article.news</item>
+	    <item name="package_name">com.eg.android.AlipayGphone</item>
+	    <item name="package_name">com.brianbaek.popstar</item>
+	    <item name="package_name">com.happyelements.AndroidAnimal.qq</item>
+	    <item name="package_name">com.tencent.game.SSGame</item>
+	    <item name="package_name">com.tencent.Alice</item>
+	    <item name="package_name">com.fox.exercise</item>
+	    <item name="package_name">com.qqgame.hlddz</item>
+	    <item name="package_name">com.qqgame.happymj</item>
+	    <item name="package_name">com.blizzard.wtcg.hearthstone</item>
+	    <item name="package_name">com.tencent.game.rhythmmaster</item>
+	    <item name="package_name">com.supercell.boombeach.uc</item>
+	    <item name="package_name">com.tencent.peng</item>
+	    <item name="package_name">sh.lilith.dgame.s360</item>
+	    <item name="package_name">sh.lilith.dgame.huawei</item>
+	    <item name="package_name">com.achievo.vipshop</item>
+	    <item name="package_name">com.mogujie</item>
+	    <item name="package_name">com.tuniu.app.ui</item>
+	    <item name="package_name">ctrip.android.view</item>
+	    <item name="package_name">com.yx</item>
+	    <item name="package_name">org.cocos2d.FishingJoy3.HUAWEI</item>
+	    <item name="package_name">com.boyaa.lordland.PLAYHUAWEI</item>
+	    <item name="package_name">com.tencent.qt.qtl</item>
+	    <item name="package_name">cn.jj</item>
+	    <item name="package_name">org.cocos2dx.FishingJoy2*</item>
+	    <item name="package_name">com.kiloo.subwaysurf</item>
+	    <item name="package_name">com.tencent.feiji</item>
+	    <item name="package_name">com.tencent.clover</item>
+	    <item name="package_name">com.tencent.pao</item>
+	    <item name="package_name">com.joym.xiongdakuaipao</item>
+	    <item name="package_name">com.imangi.templerun2</item>
+	    <item name="package_name">com.centurysoft.fruityrobo</item>
+	    <item name="package_name">com.immomo.momo</item>
+	    <item name="package_name">com.UCMobile</item>
+	    <item name="package_name">com.huawei.appmarket</item>
+	    <item name="package_name">com.tencent.qqmusic</item>
+	    <item name="package_name">com.tencent.tmgp.sgame</item>
+	    <item name="package_name">com.tencent.mtt</item>
+	    <item name="package_name">com.huawei.fans</item>
+	    <item name="package_name">com.tencent.game.SSGame</item>
+	    <item name="package_name">com.tencent.WeFire</item>
+	    <item name="package_name">com.tencent.qqlive</item>
+	    <item name="package_name">com.qiyi.video</item>
+	    <item name="package_name">com.youku.phone</item>
+	    <item name="package_name">gf.king.app</item>
+	    <item name="package_name">com.hexin.plat.android</item>
+	    <item name="package_name">com.sywg.stock</item>
+	    <item name="package_name">com.android.dazhihui</item>
+	    <item name="package_name">com.guosen.android</item>
+	    <item name="package_name">com.hundsun.android</item>
+	    <item name="package_name">wind.android</item>
+	    <item name="package_name">com.niuguwang.stock</item>
+	    <item name="package_name">com.android.dazhihui</item>
+	    <item name="package_name">com.guosen.android</item>
+            <item name="package_name">com.hundsun.android</item>
+	    <item name="package_name">wind.android</item>
+	    <item name="package_name">com.niuguwang.stock</item>
+	    <item name="package_name">com.sohu.sohuvideo</item>
+        </action>
+    </mode>
+
+    <mode id="3">  <!-- Off Mode policy -->
+    </mode>
+
+    <mode id="4">  <!-- Extreme Mode policy-->
+        <!-- action name="browser front" id="203">
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">60</item>
+        </action -->
+
+        <!-- action name="office front" id="225">
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">50</item>
+        </action -->
+
+        <!-- action name="video front" id="228">
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">85</item>
+        </action -->
+
+        <!--the ratio is same as video front-->
+        <!-- action name="video start" id="246">
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">85</item>
+        </action -->
+
+        <!--no need to excute policy,just restore-->
+        <!-- action name="video end" id="247">
+        </action -->
+
+        <!-- action name="mms front" id="235">
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">65</item>
+        </action -->
+
+        <action name="default front" id="208">
+            <item name="policy_ratio">60</item>
+            <item name="policy_auto">1</item>
+        </action>
+
+        <!-- action name="ebook front" id="205">
+            <item name="policy_auto">1</item>
+            <item name="policy_ratio">50</item>
+        </action -->
+
+    </mode>
+
+</backlight_policy>

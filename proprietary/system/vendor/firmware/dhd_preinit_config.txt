@@ -1,0 +1,5 @@
+roam_triggerb=-70
+roam_deltab=10
+roam_triggera=-65
+roam_deltaa=10
+roam_scan_period=6
